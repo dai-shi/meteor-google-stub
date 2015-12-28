@@ -1,5 +1,5 @@
 Package.describe({
-  name: "dai-shi:google-stub",
+  name: "daishi:google-stub",
   summary: "A fake for use in testing. Fakes the oauth calls amongst other APIs.",
   version: "0.0.5",
   git: "https://github.com/dai-shi/meteor-google-stub",
