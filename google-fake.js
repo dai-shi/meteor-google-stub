@@ -1,3 +1,13 @@
+if (process.env.IS_MIRROR) {
+
+ServiceConfiguration.configurations.remove({});
+ServiceConfiguration.configurations.insert({
+  service: 'google',
+  consumerKey: 'dummy_key',
+  secret: 'dummy_secret',
+  loginStyle: 'redirect'
+});
+
 HttpInterceptor = Package['xolvio:http-interceptor'].HttpInterceptor;
 HttpInterceptor.registerInterceptor('https://www.googleapis.com', Meteor.absoluteUrl('fake.www.googleapis.com'));
 HttpInterceptor.registerInterceptor('https://accounts.google.com', Meteor.absoluteUrl('fake.accounts.google.com'));
@@ -51,3 +61,5 @@ _fixIronRouterBug = function (query) {
   }
   return query;
 };
+
+}

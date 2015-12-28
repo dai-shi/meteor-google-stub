@@ -1,3 +1,6 @@
+Meteor.call('velocity/isMirror', function(err, isMirror) {
+  if (isMirror) {
+
 // intercept the URL out to the oauth service
 var _launchLogin = Package.oauth.OAuth.launchLogin;
 Package.oauth.OAuth.launchLogin = function (options) {
@@ -44,3 +47,6 @@ var _getFakeOptionsFor = {
   }
 
 };
+
+  }
+});
