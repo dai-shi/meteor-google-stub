@@ -1,6 +1,6 @@
 This package is forked from [emmerge:google-fake](https://github.com/emmerge/meteor-google-fake) to add the following features.
 - use service-configuration
-- check `IS_MIRROR`
+- activate only when `IS_MIRROR` is on
 
 ----
 
